@@ -1,0 +1,17 @@
+commad in windows to get list of files in a folder(make sure to be in the correct path)
+    1. dir - list out all files not hidden files
+    2. dir /a:h - list out all hidden files
+
+
+git init: 
+    1. It creates a new hidden .git directory inside the project folder. 
+    2. This .git directory contains all the metadata, including commit history, branches, configurations, and objects.
+    3. objects/ → Stores all commits, trees, and blobs.
+       refs/ → Contains references to branches and tags.
+       logs/ → Keeps logs of changes in branches.
+
+git status:
+    1. The git status command shows the current state of your working directory and staging area.
+    2. It tells you if there are untracked, modified, or staged files.
+    3. It helps you see what changes are ready to be committed.
+    4. +It shows which branch you are on.
