@@ -3,6 +3,11 @@ commad in windows to get list of files in a folder(make sure to be in the correc
     2. dir /a:h - list out all hidden files
 
 
+git config --global user.name "<userName>":
+    1. sets your name
+ git config --global user.email "<email>":
+    1. sets your mail
+
 git init: 
     1. It creates a new hidden .git directory inside the project folder. 
     2. This .git directory contains all the metadata, including commit history, branches, configurations, and objects.
@@ -14,4 +19,18 @@ git status:
     1. The git status command shows the current state of your working directory and staging area.
     2. It tells you if there are untracked, modified, or staged files.
     3. It helps you see what changes are ready to be committed.
-    4. +It shows which branch you are on.
+    4. It shows which branch you are on.
+
+git add <fileName>:
+    1. Tracks new files: If a file is newly created, git add makes Git recognize it.
+    2.command "git add ." tracks all files
+
+git commint -m "<msg you need to print>":
+    1. it will commit the changes made in the files.
+
+git log:
+    1. shows the history of changes that made 
+
+git reset <id>:
+    1. removes the commits that are above the that id mentioned.
+    2. it has modes: --soft, --mixed, --hard
