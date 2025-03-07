@@ -31,7 +31,7 @@ git commit -m "<msg you need to print>":
     git commit -m "msg"	                ✅ Yes	        Must stage first (git add)
     git commit -am "msg"	            ❌ No	        Works only for modified/deleted files
     git commit -m "msg" file.txt	    ❌ No	        Commits specific file without staging
-
+    
 git log:
     1. shows the history of changes that made 
 
