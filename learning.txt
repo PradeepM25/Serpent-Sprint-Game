@@ -25,7 +25,7 @@ git add <fileName>:
     1. Tracks new files: If a file is newly created, git add makes Git recognize it.
     2.command "git add ." tracks all files
 
-git commint -m "<msg you need to print>":
+git commit -m "<msg you need to print>":
     1. it will commit the changes made in the files.
 
 git log:
@@ -34,3 +34,12 @@ git log:
 git reset <id>:
     1. removes the commits that are above the that id mentioned.
     2. it has modes: --soft, --mixed, --hard
+
+git stash: 
+    1. git stash temporarily saves your uncommitted changes so you can work on something else without losing your progress.
+    git stash -> Save uncommitted changes
+    git stash list -> View saved stashes
+    git stash apply	-> Restore last stash (keeps stash in the list)
+    git stash pop -> Restore last stash and remove it from the list
+    git stash drop stash@{0} -> Delete a specific stash
+    git stash clear -> Delete all stashes
