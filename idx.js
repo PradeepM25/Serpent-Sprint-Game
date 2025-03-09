@@ -170,3 +170,4 @@ function startGame() {
 startBtn.style.display = 'block';
 startBtn.addEventListener('click', startGame);
 
+console.log("Hello i am pradeep kumar")
