@@ -68,6 +68,19 @@ Remote Repository Management:
         git push -u origin main	                    Pushes & sets upstream tracking for main
         git push origin --delete feature-branch	    Deletes feature-branch from the remote repo
         git push --force origin main	            Forces push (overwrites remote history)
+    
+    git pull:
+        Command	                                                Description
+        git pull	                            Fetches and merges changes from the remote repository into the current branch.
+        git pull origin main	                Pulls the latest changes from the main branch of the remote repository origin.
+        git pull origin <branchName>	            Pulls the latest changes from the <branchname> branch.
+    
+    Difference between pull and push:
+        Command	                    Purpose	                                Direction	            Usage
+        git pull	            Fetches and merges changes from a 	    Remote → Local	        git pull origin main
+                                remote repository to your local branch.
+        git push	            Uploads local commits to a remote   	Local → Remote	        git push origin main
+                                repository.
 
 Branching and Merging:
     Branch:
@@ -86,4 +99,20 @@ Branching and Merging:
     git push origin --delete <branch-name>: delete form remote repository
     git branch -a: list out all branches
 
-    
+Work Flow of pushing local commits to remote repo:
+        Step	        Command
+    Check branch	    git branch
+    Check status	    git status
+    Stage changes	    git add .
+    Commit changes	    git commit -m "Your message"
+    Push changes	    git push origin <branch-name>
+
+Work flow of merging branches:
+    Step	                        Command
+    Check branches	                git branch
+    Pull latest changes	            git pull origin main
+    Switch to the target branch	    git checkout main or git switch main
+    Merge the feature branch	    git merge feature-branch
+    Resolve conflicts	Fix manually, then git add . and git commit -m "Resolved conflicts"
+    Push merged changes	            git push origin main
+    Delete the merged branch	    git branch -d feature-branch (local), git push origin --delete feature-branch (remote)
