@@ -69,3 +69,21 @@ Remote Repository Management:
         git push origin --delete feature-branch	    Deletes feature-branch from the remote repo
         git push --force origin main	            Forces push (overwrites remote history)
 
+Branching and Merging:
+    Branch:
+        A branch in Git is like a separate line of development.
+        1. The default branch is called main (or master in older versions).
+        2. You can create multiple branches to work on different features or fixes.
+        3. Branches help in parallel development without interfering with the main code.
+        4. Ex: crating separate branches for different features(like login, booking ....etc).
+    
+    git branch: shows the current branch we are working in
+    git branch <branchName>: crates a new branch with branch name specified
+    git checkout <branchName>: This switches you to the specified branch. (i.e, head points to that brach the 
+                               changes we make do reflect in main project). can use git swithch <branchName>
+    git checkout -b <branchName>: creates and switches to that beanch
+    git branch -d <branchName>: deletes that branch locally
+    git push origin --delete <branch-name>: delete form remote repository
+    git branch -a: list out all branches
+
+    
