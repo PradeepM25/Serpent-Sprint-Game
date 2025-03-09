@@ -2,48 +2,55 @@ commad in windows to get list of files in a folder(make sure to be in the correc
     1. dir - list out all files not hidden files
     2. dir /a:h - list out all hidden files
 
+Git Configuration Commands:
+    git config --global user.name "<userName>":
+        1. sets your name
+    git config --global user.email "<email>":
+        1. sets your mail
 
-git config --global user.name "<userName>":
-    1. sets your name
- git config --global user.email "<email>":
-    1. sets your mail
+ Repository Management Commands:
+    git init: 
+        1. It creates a new hidden .git directory inside the project folder. 
+        2. This .git directory contains all the metadata, including commit history, branches, configurations, and objects.
+        3. objects/ → Stores all commits, trees, and blobs.
+        refs/ → Contains references to branches and tags.
+        logs/ → Keeps logs of changes in branches.
 
-git init: 
-    1. It creates a new hidden .git directory inside the project folder. 
-    2. This .git directory contains all the metadata, including commit history, branches, configurations, and objects.
-    3. objects/ → Stores all commits, trees, and blobs.
-       refs/ → Contains references to branches and tags.
-       logs/ → Keeps logs of changes in branches.
+    git status:
+        1. The git status command shows the current state of your working directory and staging area.
+        2. It tells you if there are untracked, modified, or staged files.
+        3. It helps you see what changes are ready to be committed.
+        4. It shows which branch you are on.
 
-git status:
-    1. The git status command shows the current state of your working directory and staging area.
-    2. It tells you if there are untracked, modified, or staged files.
-    3. It helps you see what changes are ready to be committed.
-    4. It shows which branch you are on.
+    3. git log:
+        1. shows the history of changes that made 
 
-git add <fileName>:
-    1. Tracks new files: If a file is newly created, git add makes Git recognize it.
-    2.command "git add ." tracks all files
+Staging & Committing Commands:
+    git add <fileName>:
+        1. Tracks new files: If a file is newly created, git add makes Git recognize it.
+        2.command "git add ." tracks all files
 
-git commit -m "<msg you need to print>":
-    1. it will commit the changes made in the files.
-    Command	                        Staging Required?	        Notes
-    git commit -m "msg"	                ✅ Yes	        Must stage first (git add)
-    git commit -am "msg"	            ❌ No	        Works only for modified/deleted files
-    git commit -m "msg" file.txt	    ❌ No	        Commits specific file without staging
+    git commit -m "<msg you need to print>":
+        1. it will commit the changes made in the files.
+        Command	                        Staging Required?	        Notes
+        git commit -m "msg"	                ✅ Yes	        Must stage first (git add)
+        git commit -am "msg"	            ❌ No	        Works only for modified/deleted files
+        git commit -m "msg" file.txt	    ❌ No	        Commits specific file without staging
+
+Undoing & Resetting Commands:
+    git reset <id>:
+        1. removes the commits that are above the that id mentioned.
+        2. it has modes: --soft, --mixed, --hard
+
+    git stash: 
+        1. git stash temporarily saves your uncommitted changes so you can work on something else without losing your progress.
+        git stash -> Save uncommitted changes
+        git stash list -> View saved stashes
+        git stash apply	-> Restore last stash (keeps stash in the list)
+        git stash pop -> Restore last stash and remove it from the list
+        git stash drop stash@{0} -> Delete a specific stash
+        git stash clear -> Delete all stashes
+
+git remote add <remoteName> <remote URL>:
+    1. The git remote add command links your local Git repository to a remote repository(like gitHub) so you can push and pull changes.
     
-git log:
-    1. shows the history of changes that made 
-
-git reset <id>:
-    1. removes the commits that are above the that id mentioned.
-    2. it has modes: --soft, --mixed, --hard
-
-git stash: 
-    1. git stash temporarily saves your uncommitted changes so you can work on something else without losing your progress.
-    git stash -> Save uncommitted changes
-    git stash list -> View saved stashes
-    git stash apply	-> Restore last stash (keeps stash in the list)
-    git stash pop -> Restore last stash and remove it from the list
-    git stash drop stash@{0} -> Delete a specific stash
-    git stash clear -> Delete all stashes
