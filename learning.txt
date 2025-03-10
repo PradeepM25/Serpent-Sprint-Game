@@ -73,7 +73,8 @@ Remote Repository Management:
         Command	                                                Description
         git pull	                            Fetches and merges changes from the remote repository into the current branch.
         git pull origin main	                Pulls the latest changes from the main branch of the remote repository origin.
-        git pull origin <branchName>	            Pulls the latest changes from the <branchname> branch.
+        git pull origin <branchName>	        Pulls the latest changes from the <branchname> branch.
+        git pull --rebase origin master         Pulls the latest changes from GitHub and applies your local commits on top of them.
     
     Difference between pull and push:
         Command	                    Purpose	                                Direction	            Usage
