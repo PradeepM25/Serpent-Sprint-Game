@@ -10,7 +10,7 @@
 
 ## ✨ Features
 - 🎨 **Simple UI** – A clean and minimalistic design.
-- 🕹️ **Keyboard Controls** – Arrow keys and WASD supported.
+- 🕹️ **Keyboard Controls** – Arrow keys (can be played only on desktop).
 - 🔥 **Increasing Difficulty** – The snake speeds up as it grows.
 - 📈 **Scoreboard** – Displays the current score and high score.
 - 🔊 **Sound Effects** – Enjoy interactive game sounds.
